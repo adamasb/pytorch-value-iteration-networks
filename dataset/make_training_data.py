@@ -91,7 +91,7 @@ def make_data(dom_size, n_domains, max_obs, max_obs_size, n_traj,
     return X_f, S1_f, S2_f, Labels_f
 
 
-def main(dom_size=(28, 28),
+def main(dom_size=(10, 10), #this should determine the size of the map being made (8,16,28)
          n_domains=5000,
          max_obs=50,
          max_obs_size=2,
@@ -117,7 +117,7 @@ def main(dom_size=(28, 28),
 if __name__ == '__main__':
 
     parser = argparse.ArgumentParser()
-    parser.add_argument("--size", "-s", type=int, help="size of the domain", default=28)
+    parser.add_argument("--size", "-s", type=int, help="size of the domain", default=10) #changed from 28, maybe this makes a difference
     parser.add_argument("--n_domains", "-nd", type=int, help="number of domains", default=5000)
     parser.add_argument("--max_obs", "-no", type=int, help="maximum number of obstacles", default=50)
     parser.add_argument("--max_obs_size", "-os", type=int, help="maximum obstacle size", default=2)
